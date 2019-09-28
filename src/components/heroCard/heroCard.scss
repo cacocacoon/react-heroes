@@ -1,0 +1,30 @@
+
+.card-body {
+	width: 200px;
+	max-width: 100%;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 3px;
+	cursor: pointer;
+
+	&.selected {
+		border-color: #40a9ff;
+		box-shadow: 0 0 0 5px rgba(24,144,255,0.2);
+	}
+
+	&:hover {
+		box-shadow: 0 0 10px 5px rgba(136, 136, 136, 0.2);
+	}
+
+	.hero-img {
+		border-radius: 50%;
+		max-width: 100%;
+		width: 150px;
+	}
+
+	h2 {
+		margin-top: 0.5em;
+		text-align: center;
+		white-space:nowrap;
+	}
+}

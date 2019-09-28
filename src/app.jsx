@@ -1,4 +1,12 @@
 import React from 'react'
-import './app.scss'
+import ReactDOM from 'react-dom'
 
-console.log(<div className="test">Hello, World</div>)
+import MyHeros from './components/myHeros/myHeros'
+
+function App() {
+	return (
+		<MyHeros />
+	)
+}
+
+ReactDOM.render(<App />, document.getElementById('app'))
