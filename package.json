@@ -19,6 +19,7 @@
 		"autoprefixer": "^9.6.1",
 		"babel-eslint": "^10.0.3",
 		"babel-loader": "^8.0.6",
+		"babel-plugin-import": "^1.12.2",
 		"css-loader": "^3.2.0",
 		"eslint": "^6.3.0",
 		"eslint-config-react-app": "^5.0.1",
@@ -41,7 +42,9 @@
 		"webpack-dev-server": "^3.8.0"
 	},
 	"dependencies": {
+		"antd": "^3.23.4",
 		"core-js": "^3.2.1",
+		"rc-queue-anim": "^1.8.2",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"react-redux": "^7.1.1",
