@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 
 import HeorCards from '../heroCards/heroCards'
 import HoerProfile from '../heroProfile/heroProfile'
-import './myHeros.scss'
+import './myHeroes.scss'
 
-export default function MyHeros() {
+export default function MyHeroes() {
 	return (
-		<div className="my-heros">
-			<HeorCards />
+		<div className="my-heroes">
 			<Router>
+				<HeorCards />
 				<Switch>
-					<Route path="/heros/:id?" component={HoerProfile} exact />
+					<Route path="/heroes/:heroId?" component={HoerProfile} exact />
 					<Redirect to="/" />
 				</Switch>
 			</Router>

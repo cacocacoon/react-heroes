@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const APP_DIR = path.resolve(__dirname, 'src')
 const BUILD_DIR = path.resolve(__dirname, 'docs')
 
-const config = {
+const config = (env, options) => ({
 	entry: APP_DIR + '/app.jsx',
 	output: {
 		publicPath: '/',
@@ -27,7 +27,7 @@ const config = {
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
-	devtool: 'source-map',
+	devtool: options.mode !== 'production' ? 'source-map' : '',
 	devServer: {
 		historyApiFallback: true,
 		inline: true,
@@ -49,7 +49,7 @@ const config = {
 			filename: 'style.[hash].css'
 		})
 	]
-}
+})
 
 module.exports = config
 

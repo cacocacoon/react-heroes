@@ -1,0 +1,39 @@
+.hero-profile {
+	.ability {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 50px;
+
+		& > p {
+			width: 40px;
+			text-align: center;
+			margin: 0;
+		}
+	}
+
+	.right-panel {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		.save-button {
+			width: 110px;
+			margin-bottom: 9px;
+		}
+	}
+
+	@media screen and (max-width:576px) {
+		.right-panel {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 25px;
+
+			.save-button {
+				width: 100%;
+				margin-bottom: 9px;
+			}
+		}
+	}
+}

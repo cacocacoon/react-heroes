@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-import MyHeros from './components/myHeros/myHeros'
+import store from './store'
+import MyHeroes from './components/myHeroes/myHeroes'
 
 function App() {
 	return (
-		<MyHeros />
+		<Provider store={store}>
+			<MyHeroes />
+		</Provider>
 	)
 }
 
