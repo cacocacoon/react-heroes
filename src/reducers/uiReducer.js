@@ -2,7 +2,7 @@ const initState = {
 	selectedHeroId: '0'
 }
 
-export const SELECT_HERO = 'SELECT_HERO'
+const SELECT_HERO = 'SELECT_HERO'
 
 export function selectHero(heroId) {
 	return {

@@ -1,8 +1,9 @@
 import React from 'react'
 import QueueAnim from 'rc-queue-anim'
 import { Row, Col, Icon } from 'antd'
-import useHeroes from '../../hooks/useHeroes'
 import { useSelector } from 'react-redux'
+
+import useHeroes from '../../hooks/useHeroes'
 import HeroCard from '../heroCard/heroCard'
 
 export default function HeroCards() {

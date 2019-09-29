@@ -1,9 +1,8 @@
 const initState = {
 	list: [],
-	profiles: []
+	profiles: {}
 }
 
-// export const FETCH_HEROES = 'FETCH_HEROES'
 const SET_HEROES = 'SET_HEROES'
 const SET_PROFILE = 'SET_PROFILE'
 
