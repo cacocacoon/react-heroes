@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 import { selectHero } from '../../reducers/uiReducer'
 import './heroCard.scss'
 
-export default function HeroCard({ loading, hero, selected, ...props }) {
+export default function HeroCard({ key, hero, selected }) {
 	const dispatch = useDispatch()
 
 	function clickHeroCard() {
@@ -14,11 +14,13 @@ export default function HeroCard({ loading, hero, selected, ...props }) {
 	}
 
 	return (
-		<Link key={hero.id} to={`/heroes/${hero.id}`} onClick={clickHeroCard}>
-			<Card className={`card-body ${selected ? 'selected' : ''}`} {...props}>
-				<img className="hero-img" src={hero.image} alt={hero.name} />
-				<p>{hero.name}</p>
-			</Card>
-		</Link>
+		<div key={key} className="card-wrapper">
+			<Link to={`/heroes/${hero.id}`} onClick={clickHeroCard}>
+				<Card className={`custom-card ${selected ? 'selected' : ''}`}>
+					<img className="hero-img" src={hero.image} alt={hero.name} />
+					<p>{hero.name}</p>
+				</Card>
+			</Link>
+		</div>
 	)
 }

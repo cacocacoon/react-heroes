@@ -8,6 +8,7 @@ import './myHeroes.scss'
 export default function MyHeroes() {
 	return (
 		<div className="my-heroes">
+			<h1>Go Hero!</h1>
 			<Router>
 				<HeorCards />
 				<Switch>
