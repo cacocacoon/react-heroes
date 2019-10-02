@@ -10,13 +10,16 @@ import './heroCards.scss'
 export default function HeroCards() {
 	const { heroes, loading } = useHeroes()
 	const selectedHeroId = useSelector(state => state.ui.selectedHeroId)
+
 	return (
 		<div className="hero-cards-wrapper">
 			{loading && <Icon type="loading" style={{ fontSize: 24 }} spin />}
 			<div className="hero-cards">
 				<QueueAnim delay={300}>
 					{heroes.map(hero => (
-						<HeroCard key={hero.id} hero={hero} selected={selectedHeroId === hero.id} />
+						<div key={hero.id} className="card-wrapper">
+							<HeroCard key={hero.id} hero={hero} selected={selectedHeroId === hero.id} />
+						</div>
 					))}
 				</QueueAnim>
 			</div>

@@ -18,8 +18,8 @@ export default function HeroProfile({ match }) {
 	useEffect(() => {
 		dispatch(selectHero(heroId))
 	}, [dispatch, heroId])
-
-	if (!heroId) {
+	
+	if (heroId === '0') {
 		return null
 	}
 

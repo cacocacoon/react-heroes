@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`heroProfile dont show 1`] = `null`;
+
+exports[`heroProfile loading 1`] = `
+<div
+  className="hero-profile"
+>
+  <div
+    className="ant-divider ant-divider-horizontal ant-divider-dashed"
+    role="separator"
+  />
+  <div
+    className="ant-skeleton ant-skeleton-active"
+  >
+    <div
+      className="ant-skeleton-content"
+    >
+      <h3
+        className="ant-skeleton-title"
+        style={
+          Object {
+            "width": "38%",
+          }
+        }
+      />
+      <ul
+        className="ant-skeleton-paragraph"
+      >
+        <li
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <li
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <li
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <li
+          style={
+            Object {
+              "width": "61%",
+            }
+          }
+        />
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`heroProfile show profile 1`] = `
+<div
+  className="hero-profile"
+>
+  <div
+    className="ant-divider ant-divider-horizontal ant-divider-dashed"
+    role="separator"
+  />
+  <div
+    className="ant-row-flex ant-row-flex-bottom"
+  >
+    <div
+      className="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12"
+    >
+      <div
+        className="ability"
+      >
+        <p>
+          STR
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: plus"
+            className="anticon anticon-plus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="plus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"
+              />
+              <path
+                d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+        <p>
+          2
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: minus"
+            className="anticon anticon-minus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="minus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        className="ability"
+      >
+        <p>
+          INT
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: plus"
+            className="anticon anticon-plus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="plus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"
+              />
+              <path
+                d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+        <p>
+          7
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: minus"
+            className="anticon anticon-minus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="minus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        className="ability"
+      >
+        <p>
+          AGI
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: plus"
+            className="anticon anticon-plus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="plus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"
+              />
+              <path
+                d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+        <p>
+          9
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: minus"
+            className="anticon anticon-minus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="minus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <div
+        className="ability"
+      >
+        <p>
+          LUK
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: plus"
+            className="anticon anticon-plus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="plus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"
+              />
+              <path
+                d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+        <p>
+          7
+        </p>
+        <button
+          className="ant-btn ant-btn-circle ant-btn-icon-only"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-label="icon: minus"
+            className="anticon anticon-minus"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="minus"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+    </div>
+    <div
+      className="ant-col ant-col-xs-24 ant-col-sm-12 ant-col-md-12"
+    >
+      <div
+        className="right-panel"
+      >
+        <p
+          className="remaining"
+        >
+          剩餘點數：
+          0
+        </p>
+        <button
+          className="ant-btn save-button ant-btn-primary"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <span>
+            儲 存
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

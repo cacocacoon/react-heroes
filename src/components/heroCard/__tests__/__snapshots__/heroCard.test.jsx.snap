@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`heroCard view 1`] = `
+<a
+  href="/heroes/1"
+  onClick={[Function]}
+>
+  <div
+    className="ant-card custom-card selected ant-card-bordered"
+  >
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    >
+      <img
+        alt="Daredevil"
+        className="hero-img"
+        src="http://i.annihil.us/u/prod/marvel/i/mg/6/90/537ba6d49472b/standard_xlarge.jpg"
+      />
+      <p>
+        Daredevil
+      </p>
+    </div>
+  </div>
+</a>
+`;
