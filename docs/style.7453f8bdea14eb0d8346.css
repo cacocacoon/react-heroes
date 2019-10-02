@@ -1,0 +1,8 @@
+.card-wrapper{display:inline-block;margin:8px;margin-bottom:18px;cursor:pointer}.card-wrapper .custom-card{width:180px;border-radius:6px}.card-wrapper .custom-card.selected,.card-wrapper .custom-card.selected:hover{border:#40a9ff 1px solid;box-shadow:0 0 0 5px rgba(24,144,255,0.2)}.card-wrapper .custom-card:hover{box-shadow:0 0 0px 5px rgba(189,189,189,0.2)}.card-wrapper .custom-card .hero-img{border-radius:50%;max-width:100%}.card-wrapper .custom-card p{margin-top:1em;margin-bottom:0;text-align:center;white-space:nowrap;font-size:18px}
+
+.hero-cards-wrapper{width:100%;overflow-y:auto}.hero-cards-wrapper .hero-cards{width:784px;margin:0 auto}
+
+.hero-profile .ability{display:flex;justify-content:space-around;align-items:center;height:50px}.hero-profile .ability>p{width:40px;text-align:center;margin:0}.hero-profile .right-panel{display:flex;flex-direction:column;align-items:flex-end}.hero-profile .right-panel .save-button{width:110px;margin-bottom:9px}@media screen and (max-width: 576px){.hero-profile .right-panel{display:flex;flex-direction:column;align-items:center;margin-top:25px}.hero-profile .right-panel .save-button{width:100%;margin-bottom:9px}}
+
+body{background-color:#f0f2f5;padding:15px}body .my-heroes{width:850px;max-width:100%;margin:0 auto;padding:15px 15px 30px 15px;background-color:white;border-radius:5px}
+

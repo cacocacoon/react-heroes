@@ -66,6 +66,7 @@ const config = (env, options) => ({
 		splitChunks: {
 			cacheGroups: {
 				vendors: {
+					test: /node_modules/,
 					chunks: chunk => chunk.name !== 'antd-icons',
 					filename: 'vendors.[contenthash].js',
 				},
