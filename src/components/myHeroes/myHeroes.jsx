@@ -9,7 +9,7 @@ export default function MyHeroes() {
 	return (
 		<div className="my-heroes">
 			<h1>Go Hero!</h1>
-			<Router>
+			<Router basename={process.env.BASE_NAME} >
 				<HeorCards />
 				<Switch>
 					<Route path="/heroes/:heroId?" component={HoerProfile} exact />
