@@ -13,7 +13,7 @@ const config = (env, options) => ({
 		app: APP_DIR + '/app.jsx',
 	},
 	output: {
-		publicPath: '/',
+		publicPath: options.mode === 'production' ? '/react-heroes/': '/',
 		path: BUILD_DIR,
 		filename: '[name].[contenthash].js'
 	},
@@ -58,7 +58,7 @@ const config = (env, options) => ({
 		new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /nb/),
 		options.mode === 'production' && new CleanWebpackPlugin(),
 		options.mode === 'production' && new BundleAnalyzerPlugin()
-	],
+	].filter(plugin => plugin),
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
