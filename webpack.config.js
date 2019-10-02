@@ -1,27 +1,34 @@
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+
 const APP_DIR = path.resolve(__dirname, 'src')
 const BUILD_DIR = path.resolve(__dirname, 'docs')
 
 const config = (env, options) => ({
-	entry: APP_DIR + '/app.jsx',
+	entry: {
+		app: APP_DIR + '/app.jsx',
+	},
 	output: {
 		publicPath: '/',
 		path: BUILD_DIR,
-		filename: 'app.js'
+		filename: '[name].[contenthash].js'
 	},
 	module: {
 		rules: [{
+			loader: 'webpack-ant-icon-loader',
+			enforce: 'pre',
+			include: require.resolve('@ant-design/icons/lib/dist')
+		}, {
 			test: /\.jsx?$/,
 			exclude: /node_modules/,
 			use: ['babel-loader', 'eslint-loader'],
 		}, {
-			test: /\.scss$/,
+			test: /\.s?css$/,
 			use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
-		}, {
-			test: /\.css$/,
-			use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
 		}]
 	},
 	resolve: {
@@ -46,9 +53,27 @@ const config = (env, options) => ({
 			cache: false,
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'style.[hash].css'
-		})
-	]
+			filename: 'style.[contenthash].css'
+		}),
+		new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /nb/),
+		options.mode === 'production' && new CleanWebpackPlugin(),
+		options.mode === 'production' && new BundleAnalyzerPlugin()
+	],
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				vendors: {
+					chunks: chunk => chunk.name !== 'antd-icons',
+					filename: 'vendors.[contenthash].js',
+				},
+				style: {
+					chunks: 'all',
+					test: /\.css$/,
+					enforce: true
+				}
+			}
+		}
+	}
 })
 
 module.exports = config
