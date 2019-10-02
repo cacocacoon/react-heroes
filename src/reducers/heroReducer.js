@@ -23,7 +23,7 @@ function setHeroes(heroes) {
 
 export function fetchHeroProfile(heroId) {
 	return async disptach => {
-		const response = await fetch(`http://hahow-recruit.herokuapp.com/heroes/${heroId}/profile`)
+		const response = await fetch(`https://hahow-recruit.herokuapp.com/heroes/${heroId}/profile`)
 		const profile = await response.json()
 		const maxPoints = Object.values(profile).reduce((accu, v) => accu + v, 0)
 		profile.maxPoints = maxPoints
