@@ -42,9 +42,6 @@ const config = (env, options) => ({
 		port: 8008
 	},
 	plugins: [
-		new webpack.EnvironmentPlugin({
-			BASE_NAME: options.mode === 'production' ? '/react-heroes' : '/'
-		}),
 		new HtmlWebpackPlugin({
 			title: 'Go Hero!',
 			meta: {
