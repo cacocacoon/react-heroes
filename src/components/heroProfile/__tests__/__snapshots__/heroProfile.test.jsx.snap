@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`heroProfile dont show 1`] = `null`;
-
 exports[`heroProfile loading 1`] = `
 <div
   className="hero-profile"

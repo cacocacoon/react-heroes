@@ -10,18 +10,15 @@ import './heroProfile.scss'
 const ABILITIES = ['str', 'int', 'agi', 'luk']
 
 export default function HeroProfile({ match }) {
-	const heroId = match.params.heroId || '0'
+	const heroId = match.params.heroId
 	const [saving, setSaving] = useState(false)
 	const heroProfile = useHeroProfile(heroId)
 	const dispatch = useDispatch()
 
 	useEffect(() => {
 		dispatch(selectHero(heroId))
+		return () => dispatch(selectHero('0'))
 	}, [dispatch, heroId])
-	
-	if (heroId === '0') {
-		return null
-	}
 
 	const loading = Number(heroId) > 0 && !heroProfile
 

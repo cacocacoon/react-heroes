@@ -1,6 +1,6 @@
 import React from 'react'
 import thunk from 'redux-thunk'
-import { MemoryRouter as Router } from 'react-router-dom'
+import { MemoryRouter as Router, Route, Switch } from 'react-router-dom'
 import { cleanup, render, fireEvent } from '@testing-library/react'
 import configureMockStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
@@ -17,11 +17,13 @@ global.fetch = jest.fn().mockImplementation(() => (
 afterEach(cleanup)
 const mockStore = configureMockStore([thunk])
 
-function TestHeroProfile({ store, heroId }) {
+function TestHeroProfile({ store, initialEntries }) {
 	return (
 		<Provider store={store} >
-			<Router>
-				<HeroProfile match={{ params: { heroId } }} />
+			<Router initialEntries={initialEntries}>
+				<Switch>
+					<Route path="/heroes/:heroId" component={HeroProfile} exact />
+				</Switch>
 			</Router>
 		</Provider>
 	)
@@ -39,22 +41,11 @@ const store = mockStore({
 	}
 })
 describe('heroProfile', () => {
-	test('dont show', async () => {
-		let heroProfile
-		await act(async () => {
-			heroProfile = TestRenderer.create(
-				<TestHeroProfile store={store} />
-			)
-		})
-
-		expect(heroProfile.toJSON()).toMatchSnapshot()
-	})
-
 	test('loading', async () => {
 		let heroProfile
 		await act(async () => {
 			heroProfile = TestRenderer.create(
-				<TestHeroProfile store={store} heroId="2" />
+				<TestHeroProfile store={store} initialEntries={['/heroes/2']} />
 			)
 		})
 
@@ -65,7 +56,7 @@ describe('heroProfile', () => {
 		let heroProfile
 		await act(async () => {
 			heroProfile = TestRenderer.create(
-				<TestHeroProfile store={store} heroId="1" />
+				<TestHeroProfile store={store} initialEntries={['/heroes/1']} />
 			)
 		})
 
@@ -80,7 +71,7 @@ describe('heroProfile', () => {
 			})
 		))
 		await act(async () => {
-			render(<TestHeroProfile store={store} heroId="1" />)
+			render(<TestHeroProfile store={store} initialEntries={['/heroes/1']} />)
 		})
 
 		const button = document.getElementsByClassName('save-button')[0]

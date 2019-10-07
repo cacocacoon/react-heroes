@@ -12,7 +12,7 @@ export default function MyHeroes() {
 			<Router>
 				<HeorCards />
 				<Switch>
-					<Route path="/heroes/:heroId?" component={HoerProfile} exact />
+					<Route path="/heroes/:heroId" component={HoerProfile} exact />
 					<Redirect to="/" />
 				</Switch>
 			</Router>
