@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import { Button, Divider, Row, Col, Skeleton, message } from 'antd'
 
 import { selectHero } from '../../reducers/uiReducer'
@@ -9,8 +10,8 @@ import './heroProfile.scss'
 
 const ABILITIES = ['str', 'int', 'agi', 'luk']
 
-export default function HeroProfile({ match }) {
-	const heroId = match.params.heroId
+export default function HeroProfile() {
+	const { heroId } = useParams()
 	const [saving, setSaving] = useState(false)
 	const heroProfile = useHeroProfile(heroId)
 	const dispatch = useDispatch()
