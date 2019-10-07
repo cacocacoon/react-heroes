@@ -49,8 +49,6 @@ const config = (env, options) => ({
 				viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 			},
 			template: APP_DIR + '/index.html',
-			hash: true,
-			cache: false,
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'style.[contenthash].css'
