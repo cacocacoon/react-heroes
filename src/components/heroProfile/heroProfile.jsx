@@ -21,9 +21,7 @@ export default function HeroProfile() {
 		return () => dispatch(selectHero('0'))
 	}, [dispatch, heroId])
 
-	const loading = Number(heroId) > 0 && !heroProfile
-
-	if (loading) {
+	if (!heroProfile) { // loading
 		return (
 			<div className="hero-profile">
 				<Divider dashed />
